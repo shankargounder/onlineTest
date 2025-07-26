@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server/app.js",
+    "postinstall": "cd server && npm install && cd .. && npm run build",
     "dev": "nodemon server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
