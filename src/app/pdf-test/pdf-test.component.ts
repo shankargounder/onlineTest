@@ -31,7 +31,7 @@ export class PdfTestComponent implements OnInit {
     const formData = new FormData();
     formData.append('file', this.selectedFile);
 
-    this.http.post<any>('http://localhost:3000/upload', formData, {
+    this.http.post<any>('/upload', formData, {
       reportProgress: true,
       observe: 'events'
     }).subscribe(event => {
