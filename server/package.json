@@ -1,0 +1,25 @@
+{
+  "name": "onlinetest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "keyword-extractor": "^0.0.28",
+    "multer": "^2.0.2",
+    "openai": "^5.10.2",
+    "path": "^0.12.7",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.17.1",
+    "rake-js": "^0.1.1"
+  }
+}

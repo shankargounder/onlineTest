@@ -1,0 +1,318 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 3596
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(AI Response:) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(In Angular, directives are a powerful feature that allows you to extend HTML by creating custom elements and attributes. They can manipulate the DOM, bind data, and enhance the behavior of HTML elements. Angular provides three main categories of directives:) Tj
+T* () Tj
+T* (1. **Component Directives**: These are directives with an associated template. They are the most common type of directive in Angular. A component directive is used to create reusable UI components.) Tj
+T* () Tj
+T* (   Example:) Tj
+T* (   ```typescript) Tj
+T* (   import { Component } from '@angular/core';) Tj
+T* () Tj
+T* (   @Component\({) Tj
+T* (     selector: 'app-hello-world',) Tj
+T* (     template: `<h1>Hello, World!</h1>`,) Tj
+T* (   }\)) Tj
+T* (   export class HelloWorldComponent {}) Tj
+T* (   ```) Tj
+T* () Tj
+T* (2. **Structural Directives**: These directives change the structure of the DOM. They can add or remove elements from the DOM based on conditions. Structural directives typically start with an asterisk \(`*`\).) Tj
+T* () Tj
+T* (   Common structural directives include:) Tj
+T* (   - `*ngIf`: Conditionally includes a template based on a boolean expression.) Tj
+T* (   - `*ngFor`: Iterates over a collection and renders a template for each item.) Tj
+T* (   - `*ngSwitch`: Conditionally switches templates based on a provided expression.) Tj
+T* () Tj
+T* (   Example of `*ngIf`:) Tj
+T* (   ```html) Tj
+T* (   <div *ngIf="isVisible">This will be shown if isVisible is true.</div>) Tj
+T* (   ```) Tj
+T* () Tj
+T* (   Example of `*ngFor`:) Tj
+T* (   ```html) Tj
+T* (   <ul>) Tj
+T* (     <li *ngFor="let item of items">{{ item }}</li>) Tj
+T* (   </ul>) Tj
+T* (   ```) Tj
+T* () Tj
+T* (3. **Attribute Directives**: These directives change the appearance or behavior of an existing element. They don’t change the structure of the DOM like structural directives. You create attribute directives by using the `@Directive` decorator.) Tj
+T* () Tj
+T* (   Example of a simple attribute directive:) Tj
+T* (   ```typescript) Tj
+T* (   import { Directive, ElementRef, Renderer2 } from '@angular/core';) Tj
+T* () Tj
+T* (   @Directive\({) Tj
+T* (     selector: '[appHighlight]') Tj
+T* (   }\)) Tj
+T* (   export class HighlightDirective {) Tj
+T* (     constructor\(el: ElementRef, renderer: Renderer2\) {) Tj
+T* (       renderer.setStyle\(el.nativeElement, 'backgroundColor', 'yellow'\);) Tj
+T* (     }) Tj
+T* (   }) Tj
+T* (   ```) Tj
+T* () Tj
+T* (   Usage in a template:) Tj
+T* (   ```html) Tj
+T* (   <p appHighlight>This text will be highlighted.</p>) Tj
+T* (   ```) Tj
+T* () Tj
+T* (### Creating a Custom Directive) Tj
+T* (To create a custom directive in Angular, follow these steps:) Tj
+T* () Tj
+T* (1. **Generate the Directive**:) Tj
+T* (   You can use the Angular CLI to generate a directive:) Tj
+T* (   ```bash) Tj
+T* (   ng generate directive directive-name) Tj
+T* (   ```) Tj
+T* () Tj
+T* (2. **Implement the Logic**:) Tj
+T* (   Edit the generated directive file to implement the logic you need.) Tj
+T* () Tj
+T* (3. **Use the Directive**:) Tj
+T* (   Add the directive to your templates as an attribute or structural directive.) Tj
+T* () Tj
+T* (### Summary) Tj
+T* (Directives are essential in Angular for manipulating the DOM and creating dynamic, interactive web applications. With component, structural, and attribute directives, you can extend HTML's capabilities to suit your app's needs.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20250723233046+05'30')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000003800 00000 n 
+0000005617 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000003857 00000 n 
+0000003982 00000 n 
+0000004112 00000 n 
+0000004245 00000 n 
+0000004382 00000 n 
+0000004505 00000 n 
+0000004634 00000 n 
+0000004766 00000 n 
+0000004902 00000 n 
+0000005030 00000 n 
+0000005157 00000 n 
+0000005286 00000 n 
+0000005419 00000 n 
+0000005521 00000 n 
+0000005865 00000 n 
+0000005951 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <AC62A70A617F911844E6FDA266020FF2> <AC62A70A617F911844E6FDA266020FF2> ]
+>>
+startxref
+6055
+%%EOF

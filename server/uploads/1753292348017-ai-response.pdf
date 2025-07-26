@@ -1,0 +1,325 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4516
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(AI Response:) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(Angular modules are a fundamental part of an Angular application. They help organize an application into cohesive blocks of functionality and provide a way to control the scope of components, directives, pipes, and services.) Tj
+T* () Tj
+T* (### Key Concepts of Angular Modules) Tj
+T* () Tj
+T* (1. **NgModule**:) Tj
+T* (   - An Angular module is defined using the `@NgModule` decorator. This decorator takes a metadata object that describes how to compile and run a module.) Tj
+T* () Tj
+T* (   Example:) Tj
+T* (   ```typescript) Tj
+T* (   import { NgModule } from '@angular/core';) Tj
+T* (   import { BrowserModule } from '@angular/platform-browser';) Tj
+T* (   import { AppComponent } from './app.component';) Tj
+T* () Tj
+T* (   @NgModule\({) Tj
+T* (     declarations: [AppComponent],  // Components, directives, and pipes that belong to this module) Tj
+T* (     imports: [BrowserModule],      // Other modules whose exported classes are needed by component templates in this module) Tj
+T* (     providers: [],                 // Creatable services this module contributes to the global collection) Tj
+T* (     bootstrap: [AppComponent]      // The main application view, called the root component, that hosts all other app views) Tj
+T* (   }\)) Tj
+T* (   export class AppModule { }) Tj
+T* (   ```) Tj
+T* () Tj
+T* (2. **Declarations**:) Tj
+T* (   - This array contains components, directives, and pipes that belong to the module. You must declare all components that you want to use within the module.) Tj
+T* () Tj
+T* (3. **Imports**:) Tj
+T* (   - This array includes other modules needed by the components in the current module. If your module uses features from a library module \(like `FormsModule`, `RouterModule`, etc.\), you need to import that module here.) Tj
+T* () Tj
+T* (4. **Providers**:) Tj
+T* (   - This array is used to register services that the module contributes to the application. Services listed here can be available to the entire application, depending on the module structure.) Tj
+T* () Tj
+T* (5. **Bootstrap**:) Tj
+T* (   - In the root module, this property defines the root component that Angular should bootstrap when it starts the application.) Tj
+T* () Tj
+T* (### Types of Angular Modules) Tj
+T* () Tj
+T* (1. **Root Module**:) Tj
+T* (   - The main module of the application, usually named `AppModule`.) Tj
+T* () Tj
+T* (2. **Feature Modules**:) Tj
+T* (   - These are modules that encapsulate a specific feature of your application. They can help organize code, facilitate lazy loading, and promote reusability.) Tj
+T* () Tj
+T* (   Example of a feature module:) Tj
+T* (   ```typescript) Tj
+T* (   import { NgModule } from '@angular/core';) Tj
+T* (   import { CommonModule } from '@angular/common';) Tj
+T* (   import { FeatureComponent } from './feature.component';) Tj
+T* () Tj
+T* (   @NgModule\({) Tj
+T* (     declarations: [FeatureComponent],) Tj
+T* (     imports: [CommonModule],) Tj
+T* (     exports: [FeatureComponent] // Exports to be used in other modules) Tj
+T* (   }\)) Tj
+T* (   export class FeatureModule {}) Tj
+T* (   ```) Tj
+T* () Tj
+T* (3. **Shared Modules**:) Tj
+T* (   - These are used to share common functionality, such as components and pipes, across multiple modules. They typically do not have their providers or bootstrap components.) Tj
+T* () Tj
+T* (4. **Core Module**:) Tj
+T* (   - This module is used to provide singleton services at the application level and is typically only imported once in the root module.) Tj
+T* () Tj
+T* (### Lazy Loading) Tj
+T* () Tj
+T* (Angular supports lazy loading, which defers the loading of feature modules until they are needed. This can significantly improve the performance of larger applications.) Tj
+T* () Tj
+T* (### Example of Lazy Loading) Tj
+T* () Tj
+T* (You can configure a lazy-loaded module in your routing configuration:) Tj
+T* () Tj
+T* (```typescript) Tj
+T* (const routes: Routes = [) Tj
+T* (  { path: 'feature', loadChildren: \(\) => import\('./feature/feature.module'\).then\(m => m.FeatureModule\) }) Tj
+T* (];) Tj
+T* (```) Tj
+T* () Tj
+T* (### Conclusion) Tj
+T* () Tj
+T* (Understanding Angular modules helps to effectively organize your application, create reusable components, and manage dependencies seamlessly. They are crucial for building maintainable, scalable web applications in Angular.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20250723230907+05'30')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000004720 00000 n 
+0000006537 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000004777 00000 n 
+0000004902 00000 n 
+0000005032 00000 n 
+0000005165 00000 n 
+0000005302 00000 n 
+0000005425 00000 n 
+0000005554 00000 n 
+0000005686 00000 n 
+0000005822 00000 n 
+0000005950 00000 n 
+0000006077 00000 n 
+0000006206 00000 n 
+0000006339 00000 n 
+0000006441 00000 n 
+0000006785 00000 n 
+0000006871 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <612CC3A787D49BB585FC2FED93F14F41> <612CC3A787D49BB585FC2FED93F14F41> ]
+>>
+startxref
+6975
+%%EOF

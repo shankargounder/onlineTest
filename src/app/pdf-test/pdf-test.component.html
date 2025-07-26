@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="container mt-4">
+  <h3>Upload Pdf File for Question Generation</h3>
+  <input type="file" class="form-control mb-2" (change)="onFileSelected($event)" />
+
+  <div class="progress my-2" *ngIf="uploadProgress > 0">
+    <div class="progress-bar" role="progressbar" [style.width.%]="uploadProgress">
+      {{ uploadProgress }}%
+    </div>
+  </div>
+
+  <button class="btn btn-primary" (click)="onUpload()" [disabled]="!selectedFile">Upload & Generate</button>
+  
+  <div *ngIf="questions.length > 0" class="mt-4">
+    <h4>Generated Questions</h4>
+    <div *ngFor="let q of questions; let i = index" class="mb-3">
+      <p><strong>{{ i + 1 }}. {{ q.question }}</strong></p>
+      <ul>
+        <li *ngFor="let opt of q.options">{{ opt }}</li>
+      </ul>
+      <p><em>Answer: {{ q.answer }}</em></p>
+    </div>
+  </div>
+</div>
+<div class="spinner-overlay" *ngIf="isLoading">
+  <div class="spinner"></div>
+</div>

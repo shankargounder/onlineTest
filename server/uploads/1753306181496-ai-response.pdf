@@ -1,0 +1,294 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 2690
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(AI Response:) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(Kinematics is a branch of classical mechanics that describes the motion of objects without considering the forces that cause the motion. It focuses on the relationships between displacement, velocity, acceleration, and time.) Tj
+T* () Tj
+T* (Here are some key concepts and equations in kinematics:) Tj
+T* () Tj
+T* (### 1. Displacement \(s\)) Tj
+T* (Displacement is the change in position of an object. It is a vector quantity, having both magnitude and direction.) Tj
+T* () Tj
+T* (### 2. Velocity \(v\)) Tj
+T* (Velocity is the rate of change of displacement with respect to time. It is also a vector quantity and is defined as:) Tj
+T* () Tj
+T* (\\[) Tj
+T* (v = \\frac{s}{t}) Tj
+T* (\\]) Tj
+T* () Tj
+T* (where \\\(s\\\) is displacement and \\\(t\\\) is the time taken.) Tj
+T* () Tj
+T* (### 3. Acceleration \(a\)) Tj
+T* (Acceleration is the rate of change of velocity with respect to time. It can be defined as:) Tj
+T* () Tj
+T* (\\[) Tj
+T* (a = \\frac{v_f - v_i}{t}) Tj
+T* (\\]) Tj
+T* () Tj
+T* (where \\\(v_f\\\) is the final velocity, \\\(v_i\\\) is the initial velocity, and \\\(t\\\) is the time taken for that change.) Tj
+T* () Tj
+T* (### 4. Equations of Motion) Tj
+T* (For uniformly accelerated motion \(constant acceleration\), there are three key equations, often referred to as the kinematic equations:) Tj
+T* () Tj
+T* (1. \\\( v = v_i + at \\\)) Tj
+T* (2. \\\( s = v_i t + \\frac{1}{2} a t^2 \\\)) Tj
+T* (3. \\\( v^2 = v_i^2 + 2as \\\)) Tj
+T* () Tj
+T* (Where:) Tj
+T* (- \\\(s\\\) is the displacement,) Tj
+T* (- \\\(v_i\\\) is the initial velocity,) Tj
+T* (- \\\(v\\\) is the final velocity,) Tj
+T* (- \\\(a\\\) is the acceleration,) Tj
+T* (- \\\(t\\\) is the time.) Tj
+T* () Tj
+T* (### 5. Graphical Representation) Tj
+T* (- **Position-Time Graph**: Shows how position changes over time. The slope of the line represents velocity.) Tj
+T* (- **Velocity-Time Graph**: Shows the change in velocity over time. The slope represents acceleration, and the area under the curve represents displacement.) Tj
+T* (- **Acceleration-Time Graph**: Represents how acceleration changes over time. The area under this graph gives the change in velocity.) Tj
+T* () Tj
+T* (### Applications) Tj
+T* (Kinematics is used in various fields, including physics, engineering, robotics, biomechanics, and any scenario that involves analyzing the motion of objects.) Tj
+T* () Tj
+T* (If you have a specific problem or concept in kinematics you would like to explore further, feel free to ask!) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20250724025941+05'30')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000002894 00000 n 
+0000004711 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000002951 00000 n 
+0000003076 00000 n 
+0000003206 00000 n 
+0000003339 00000 n 
+0000003476 00000 n 
+0000003599 00000 n 
+0000003728 00000 n 
+0000003860 00000 n 
+0000003996 00000 n 
+0000004124 00000 n 
+0000004251 00000 n 
+0000004380 00000 n 
+0000004513 00000 n 
+0000004615 00000 n 
+0000004959 00000 n 
+0000005045 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <74ABCE64BACE3FE7FD2A8DA667282814> <74ABCE64BACE3FE7FD2A8DA667282814> ]
+>>
+startxref
+5149
+%%EOF

@@ -1,0 +1,310 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 5530
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(AI Response:) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(Node.js is a powerful JavaScript runtime built on Chrome's V8 JavaScript engine. It is designed to build scalable network applications. Below is a detailed understanding of its core concepts, architecture, and features.) Tj
+T* () Tj
+T* (### 1. **Event-Driven Architecture**) Tj
+T* (Node.js is event-driven, meaning that it responds to events emitted by various objects, often employed in I/O operations like reading files or querying databases. This makes Node.js particularly adept for building applications that require a lot of input/output operations, as it can handle multiple requests without blocking.) Tj
+T* () Tj
+T* (#### Key Components:) Tj
+T* (- **Event Loop**: The core of Node.js. It manages the execution of code and handles incoming requests asynchronously.) Tj
+T* (- **EventEmitter**: A class that is part of Node.js which allows objects to send and receive events.) Tj
+T* () Tj
+T* (### 2. **Non-Blocking I/O**) Tj
+T* (Node.js uses non-blocking, asynchronous I/O operations. This means that instead of waiting for an I/O operation to complete before moving on to the next task, Node can continue executing other operations. This is critical for building high-performance applications.) Tj
+T* () Tj
+T* (#### Key Features:) Tj
+T* (- **Callbacks**: Functions passed as arguments that execute when an operation completes.) Tj
+T* (- **Promises**: Objects representing the eventual completion \(or failure\) of an asynchronous operation.) Tj
+T* (- **async/await**: Syntax introduced in ES2017 that allows writing asynchronous code in a synchronous manner.) Tj
+T* () Tj
+T* (### 3. **Single-Threaded Model**) Tj
+T* (Although Node.js uses a single thread to handle requests, it can handle many connections simultaneously because of its event-driven nature. The I/O operations are offloaded to the system kernel whenever possible, allowing Node.js to remain event-driven and non-blocking.) Tj
+T* () Tj
+T* (### 4. **Modules**) Tj
+T* (Node.js uses a module system based on CommonJS, allowing developers to organize code into reusable pieces.) Tj
+T* () Tj
+T* (#### Key Concepts:) Tj
+T* (- **Module**: A self-contained block of code that can be exported and imported in other files.) Tj
+T* (- **npm \(Node Package Manager\)**: A package manager for JavaScript that allows developers to install and manage external libraries and tools.) Tj
+T* () Tj
+T* (### 5. **Built-in Libraries**) Tj
+T* (Node.js comes with a set of built-in libraries, referred to as "core modules," that provide functionality for various tasks such as:) Tj
+T* () Tj
+T* (- **HTTP**: To create web servers.) Tj
+T* (- **File System \(fs\)**: To interact with the file system.) Tj
+T* (- **Path**: To handle and transform file paths.) Tj
+T* (- **Events**: To handle events in a consistent manner.) Tj
+T* () Tj
+T* (### 6. **Frameworks**) Tj
+T* (Although Node.js provides a core set of APIs, many frameworks build on top of it to simplify development. Popular frameworks include:) Tj
+T* () Tj
+T* (- **Express.js**: A minimalist web framework for building web applications and APIs.) Tj
+T* (- **NestJS**: A framework for building efficient, scalable Node.js server-side applications using TypeScript.) Tj
+T* () Tj
+T* (### 7. **Middleware**) Tj
+T* ( In the context of frameworks like Express.js, middleware functions are functions that have access to the request object, response object, and the next middleware function in the application’s request-response cycle.) Tj
+T* () Tj
+T* (### 8. **Error Handling**) Tj
+T* (Node.js utilizes a few common patterns for error handling, including callbacks that return error objects, promises that reject, and try/catch blocks with async/await.) Tj
+T* () Tj
+T* (### 9. **RESTful APIs**) Tj
+T* (Node.js is commonly used to build RESTful APIs, which adhere to a set of conventions for constructing APIs that can be interacted with over HTTP. The simplicity of routing in Node.js allows for creating REST endpoints quickly.) Tj
+T* () Tj
+T* (### 10. **Real-Time Applications**) Tj
+T* (Node.js is particularly well-suited for real-time applications, such as chat applications or live-streaming platforms, due to its event-driven architecture and WebSockets for full-duplex communication.) Tj
+T* () Tj
+T* (### 11. **Testing**) Tj
+T* (Unit testing and integration testing in Node.js can be handled by various tools and libraries, such as Mocha, Chai, and Jest, which help ensure code quality and behavior.) Tj
+T* () Tj
+T* (### 12. **Microservices and GraphQL**) Tj
+T* (Node.js is commonly used in microservice architectures due to its lightweight nature. GraphQL, a query language for APIs, is frequently used alongside Node.js for more efficient data retrieval.) Tj
+T* () Tj
+T* (### 13. **Deployment**) Tj
+T* (Node.js applications can be hosted on various services like AWS, Heroku, DigitalOcean, and others. Many developers use Docker to containerize their applications for consistent deployments.) Tj
+T* () Tj
+T* (### Conclusion) Tj
+T* (Node.js is a versatile platform that allows developers to build fast and scalable applications using JavaScript on the server-side. Its non-blocking architecture, rich ecosystem of modules, and community support make it a popular choice for developers in many domains. Understanding these concepts will help you leverage Node.js effectively in your application development.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20250724123108+05'30')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000005734 00000 n 
+0000007551 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000005791 00000 n 
+0000005916 00000 n 
+0000006046 00000 n 
+0000006179 00000 n 
+0000006316 00000 n 
+0000006439 00000 n 
+0000006568 00000 n 
+0000006700 00000 n 
+0000006836 00000 n 
+0000006964 00000 n 
+0000007091 00000 n 
+0000007220 00000 n 
+0000007353 00000 n 
+0000007455 00000 n 
+0000007799 00000 n 
+0000007885 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <B21DD1AE5F153A667A85ADBEB7CF971F> <B21DD1AE5F153A667A85ADBEB7CF971F> ]
+>>
+startxref
+7989
+%%EOF

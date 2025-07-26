@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container mt-4">
+   
+    <h3>AI Search</h3>
+    <input [(ngModel)]="query" type="text" class="form-control mb-2" placeholder="Ask me anything..." />
+    <button class="btn btn-primary" (click)="askAI()">Ask</button>
+      
+
+    <div class="mt-3 p-3 border rounded" *ngIf="reply">
+        <strong>AI:</strong>
+        <span *ngIf="isLoading">Thinking...</span>
+        <span *ngIf="!isLoading">{{ reply }}</span>
+    </div>
+    <br>
+    <button *ngIf="showGenerate" class="btn btn-primary mt-3" (click)="generateTest()">Generate Test on {{query}}</button>
+    <p *ngIf="testPrepare">Your test is generating on {{query}} ...</p>
+    <p *ngIf="readyToTest">Are You ready to take test ...</p>
+
+    <p *ngIf="testStart">There are total {{questions.length}} questions, and you have {{questions.length}} mins to complete the test</p>
+
+    <button *ngIf="testStart" class="btn btn-primary mt-3" (click)="startTest()">Start Your Test</button>
+    
+</div>
+
+
+
+<div *ngIf="(questions.length > 0 && takeYourTest)" class="container mt-4 p-5">
+    <h4>Generated Questions</h4>
+    <button *ngIf="takeYourTest" class="btn btn-primary mt-3" (click)="endTest()">End Test</button>
+    <h2 *ngIf="enableSolution">Your Score : {{resultScore}} / {{questions.length}}</h2>
+    <div *ngFor="let q of questions; let i = index" class="mb-3">
+        <p><strong>{{ i + 1 }}. {{ q.question }}</strong></p>
+        <ul>
+            <li *ngFor="let opt of q.options">
+                <input type="radio" name="question-{{i}}" value="{{opt}}" [(ngModel)]="q.selectAnswer"> {{ opt }}
+            </li>
+        </ul>
+        <p><em>Answer: {{ q.answer }}</em></p>
+        <p *ngIf="enableSolution"><strong>Result: 
+            <span *ngIf="q.answer === q.selectAnswer; else wrong" class="text-success"> Correct Answer</span>
+            <ng-template #wrong>
+                <span *ngIf="q.answer !== q.selectAnswer" class="text-danger"> Wrong Answer</span>
+            </ng-template>
+        </strong></p>
+    </div>
+</div>
