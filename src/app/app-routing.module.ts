@@ -6,7 +6,7 @@ import { PdfTestComponent } from './pdf-test/pdf-test.component';
 
 const routes: Routes = [
   // { path: 'login', component: LoginComponent},
-  // { path: 'search-test', component: SearchTestComponent},
+  { path: 'search-test', component: SearchTestComponent},
   { path: 'pdf-test', component: PdfTestComponent},
   { path: '', redirectTo: 'pdf-test', pathMatch: 'full' },
 ];
