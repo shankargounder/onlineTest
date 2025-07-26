@@ -65,7 +65,7 @@ export class SearchTestComponent implements OnInit {
       formData.append('file', pdfBlob, 'ai-response.pdf');
       
   
-      this.http.post<any>('http://localhost:3000/upload', formData, {
+      this.http.post<any>('/upload', formData, {
         reportProgress: true,
         observe: 'events'
       }).subscribe(event => {
