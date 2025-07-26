@@ -9,7 +9,8 @@ export class ApiService {
 
   constructor(private http: HttpClient){}
   sendQuery(query: string): Observable<any> {
-    return this.http.post('http://localhost:3000/chat', { query });
+    return this.http.post('/chat', { query });
+    //return this.http.post('http://localhost:3000/chat', { query });
   }
   
 }
