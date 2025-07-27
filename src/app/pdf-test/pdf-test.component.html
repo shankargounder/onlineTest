@@ -10,9 +10,14 @@
   </div>
 
   <button class="btn btn-primary" (click)="onUpload()" [disabled]="!selectedFile">Upload & Generate</button>
-  
+  <input type="text" class="form-control" [(ngModel)]="mobileNumber" placeholder="Enter you whatsApp Number" />
+   <button class="btn btn-primary" (click)="shareTest()">Share Test</button>
   <div *ngIf="questions.length > 0" class="mt-4">
     <h4>Generated Questions</h4>
+
+    
+   
+
     <div *ngFor="let q of questions; let i = index" class="mb-3">
       <p><strong>{{ i + 1 }}. {{ q.question }}</strong></p>
       <ul>

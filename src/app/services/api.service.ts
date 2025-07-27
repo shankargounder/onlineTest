@@ -9,8 +9,13 @@ export class ApiService {
 
   constructor(private http: HttpClient){}
   sendQuery(query: string): Observable<any> {
+    //return this.http.post('/chat', { query });
     return this.http.post('/chat', { query });
-    //return this.http.post('http://localhost:3000/chat', { query });
   }
+
+  // sendMessage(data: any): Observable<any> {
+  //   console.log(data);
+  //   return this.http.post('http://localhost:3000/send-message', {data});
+  // }
   
 }

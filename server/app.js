@@ -12,9 +12,10 @@ app.use(express.json());
 
 // Serve static Angular files
 app.use(express.static(path.join(__dirname, '../dist/test')));
-
+//const { sendToMultipleNumbers } = require('./sendWhatsApp');
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  // apiKey: process.env.OPENAI_API_KEY
+  apiKey: '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'
 });
 
 // Multer config for file upload
@@ -55,8 +56,6 @@ async function generateQuestions(text) {
 
   return gptOutput;
 }
-
-
 
 // Chat endpoint
 app.post('/chat', async (req, res) => {
@@ -113,5 +112,5 @@ app.get(/^\/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/test/index.html'));
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

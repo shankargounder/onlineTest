@@ -15,6 +15,7 @@ export class PdfTestComponent implements OnInit {
   query = '';
   reply = '';
   isLoading = false;
+  mobileNumber:any;
   constructor(private http: HttpClient, private _apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -43,6 +44,22 @@ export class PdfTestComponent implements OnInit {
         this.isLoading = false;
       }
     });
+  }
+
+  shareTest() {
+    const message = `Hey! Check this out the Test link is comming soon`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/+91${this.mobileNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, '_blank');
+    // let data = {
+    //   numbers : `+91${this.mobileNumber}`,
+    //   message: messages
+    // }
+    // this._apiService.sendMessage(data).subscribe((res)=>{
+    //   alert(res);
+    // })
   }
 
 }
