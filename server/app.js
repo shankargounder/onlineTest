@@ -14,8 +14,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist/test')));
 //const { sendToMultipleNumbers } = require('./sendWhatsApp');
 const openai = new OpenAI({
-  // apiKey: process.env.OPENAI_API_KEY
-  apiKey: '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'
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 // Multer config for file upload
