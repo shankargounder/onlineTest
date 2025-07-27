@@ -8,10 +8,34 @@
       {{ uploadProgress }}%
     </div>
   </div>
-
+  <input type="text" class="form-control" [(ngModel)]="testTitle" placeholder="Enter the test title" />
   <button class="btn btn-primary" (click)="onUpload()" [disabled]="!selectedFile">Upload & Generate</button>
-  <input type="text" class="form-control" [(ngModel)]="mobileNumber" placeholder="Enter you whatsApp Number" />
-   <button class="btn btn-primary" (click)="shareTest()">Share Test</button>
+  <!-- <input type="text" class="form-control" [(ngModel)]="mobileNumber" placeholder="Enter you whatsApp Number" />
+   <button class="btn btn-primary" (click)="shareTest()">Share Test</button> -->
+
+  <table class="table table-bordered table-sm mt-4">
+    <tr>
+      <th>S.NO</th>
+      <th>Topic</th>
+      <th>Share</th>
+    </tr>
+    <tr *ngFor="let item of listTest;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.title}}</td>
+      <td>
+        <div class="row">
+          <div class="col-md-8">
+            <input type="text" class="form-control" [(ngModel)]="mobileNumbers[i]" placeholder="Enter you whatsApp Number" />
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-primary btn-sm" (click)="shareTest(item._id, i)">Share Test</button>
+          </div>
+        </div>
+        
+        
+      </td>
+    </tr>
+  </table>
   <div *ngIf="questions.length > 0" class="mt-4">
     <h4>Generated Questions</h4>
 

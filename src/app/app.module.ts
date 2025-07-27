@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { SearchTestComponent } from './search-test/search-test.component';
 import { PdfTestComponent } from './pdf-test/pdf-test.component';
 import { HeaderComponent } from './header/header.component';
+import { AttendTestComponent } from './attend-test/attend-test.component';
 
 
 
@@ -21,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
     SearchTestComponent,
     PdfTestComponent,
     HeaderComponent,
+    AttendTestComponent,
   ],
   imports: [
     BrowserModule,

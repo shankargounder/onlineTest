@@ -15,10 +15,21 @@ export class PdfTestComponent implements OnInit {
   query = '';
   reply = '';
   isLoading = false;
-  mobileNumber:any;
+  testTitle:any;
+  mobileNumbers: string[] = []; // holds numbers per row
+
+  listTest:any;
   constructor(private http: HttpClient, private _apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getAllTest();
+  }
+
+  getAllTest() {
+    this._apiService.getAllTests().subscribe((res)=>{
+      this.listTest= res;
+      this.mobileNumbers = new Array(this.listTest.length).fill('');
+    })
   }
 
   onFileSelected(event: any) {
@@ -42,24 +53,29 @@ export class PdfTestComponent implements OnInit {
         console.log(event.body.questions)
         this.questions = event.body.questions;
         this.isLoading = false;
+        let Object  = {
+          title: this.testTitle,
+          questions : this.questions
+        }
+        this._apiService.createTest(Object).subscribe((res)=>{
+          console.log(res);
+          this.getAllTest();
+        })
       }
     });
   }
 
-  shareTest() {
-    const message = `Hey! Check this out the Test link is comming soon`;
+  shareTest(id:any, index:any) {
+    //const link = `http://localhost:4200/attend-test?id=${id}`;
+    const link = `https://onlinetest-jhsq.onrender.com/attend-test?id=${id}`;
+    const message = `Please click to attend the test: \n${link}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/+91${this.mobileNumber}?text=${encodedMessage}`;
+    const number = this.mobileNumbers[index];
+    const whatsappURL = `https://wa.me/+91${number}?text=${encodedMessage}`;
 
     // Open WhatsApp in a new tab
     window.open(whatsappURL, '_blank');
-    // let data = {
-    //   numbers : `+91${this.mobileNumber}`,
-    //   message: messages
-    // }
-    // this._apiService.sendMessage(data).subscribe((res)=>{
-    //   alert(res);
-    // })
+   
   }
 
 }

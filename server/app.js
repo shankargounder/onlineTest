@@ -5,6 +5,7 @@ const fs = require('fs');
 const pdfParse = require('pdf-parse');
 const OpenAI = require('openai');
 const path = require('path');
+const mongoose = require('mongoose');
 require('dotenv').config();
 const app = express();
 app.use(cors());
@@ -12,10 +13,51 @@ app.use(express.json());
 
 // Serve static Angular files
 app.use(express.static(path.join(__dirname, '../dist/test')));
-//const { sendToMultipleNumbers } = require('./sendWhatsApp');
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
+
+// mongoDB connection
+// MongoDB connection
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
+
+// Schema and model
+const TestSchema = new mongoose.Schema({
+  title: String,
+  questions: [
+    {
+      question: String,
+      options: [String],
+      answer: String,
+      selectAnswer: String
+    }
+  ],
+  createdAt: { type: Date, default: Date.now }
+});
+const Test = mongoose.model('Test', TestSchema);
+
+// Routes
+app.post('/createTests', async (req, res) => {
+  console.log(req.body);
+  try {
+    const test = new Test(req.body);
+    const savedTest = await test.save();
+    res.status(201).json(savedTest);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to save test' });
+  }
+});
+
+app.get('/getTest', async (req, res) => {
+  const tests = await Test.find();
+  res.json(tests);
+});
+
 
 // Multer config for file upload
 const storage = multer.diskStorage({
@@ -48,7 +90,7 @@ async function generateQuestions(text) {
   });
 
   let gptOutput = response.choices[0].message.content.trim();
-  console.log(response);
+  //console.log(response);
   // Remove code fences if GPT adds ```json ... ```
   gptOutput = gptOutput.replace(/```json|```/g, "");
   // console.log("with \n ", gptOutput);
@@ -87,7 +129,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
       text = fs.readFileSync(filePath, 'utf-8');
     }
 
-    console.log("txt ", text);
+    //console.log("txt ", text);
     const gptOutput = await generateQuestions(text);
 
     // Try parsing GPT output as JSON

@@ -1,0 +1,17 @@
+<h2>Test on {{title}}</h2>
+<hr>
+<div *ngFor="let q of questions; let i = index" class="mb-3">
+    <p><strong>{{ i + 1 }}. {{ q.question }}</strong></p>
+    <ul>
+        <li *ngFor="let opt of q.options" style="list-style-type: none;">
+            <input type="radio" name="question-{{i}}" value="{{opt}}" [(ngModel)]="q.selectAnswer"> {{ opt }}
+        </li>
+    </ul>
+    <!-- <p><em>Answer: {{ q.answer }}</em></p>
+    <p *ngIf="enableSolution"><strong>Result: 
+        <span *ngIf="q.answer === q.selectAnswer; else wrong" class="text-success"> Correct Answer</span>
+        <ng-template #wrong>
+            <span *ngIf="q.answer !== q.selectAnswer" class="text-danger"> Wrong Answer</span>
+        </ng-template>
+    </strong></p> -->
+</div>
