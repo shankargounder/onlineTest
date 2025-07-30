@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
 export class ApiService {
   private tests: any[] = [];
   private lastResult: any = null;
-  private baseUrl = "http://localhost:3000"
+  //private baseUrl = "http://localhost:3000"
   constructor(private http: HttpClient){}
   sendQuery(query: string): Observable<any> {
     //return this.http.post('/chat', { query });
-    return this.http.post(`${this.baseUrl}/chat`, { query });
+    return this.http.post(`/chat`, { query });
   }
 
   // sendMessage(data: any): Observable<any> {
@@ -19,11 +19,15 @@ export class ApiService {
   // }
 
   createTest(testData: any) {
-    return this.http.post(`/createTests`, testData);
+    return this.http.post(`createTests`, testData);
   }
 
   getAllTests() {
-    return this.http.get(`/getTest`);
+    return this.http.get(`getTest`);
+  }
+
+  getFromPython() {
+    return this.http.get(`callFromPython`);
   }
   
 }

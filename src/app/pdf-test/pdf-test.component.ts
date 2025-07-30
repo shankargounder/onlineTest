@@ -26,10 +26,10 @@ export class PdfTestComponent implements OnInit {
   }
 
   getAllTest() {
-    this._apiService.getAllTests().subscribe((res)=>{
-      this.listTest= res;
-      this.mobileNumbers = new Array(this.listTest.length).fill('');
-    })
+    // this._apiService.getAllTests().subscribe((res)=>{
+    //   this.listTest= res;
+    //   this.mobileNumbers = new Array(this.listTest.length).fill('');
+    // })
   }
 
   onFileSelected(event: any) {
@@ -53,16 +53,23 @@ export class PdfTestComponent implements OnInit {
         console.log(event.body.questions)
         this.questions = event.body.questions;
         this.isLoading = false;
-        let Object  = {
-          title: this.testTitle,
-          questions : this.questions
-        }
-        this._apiService.createTest(Object).subscribe((res)=>{
-          console.log(res);
-          this.getAllTest();
-        })
+        // let Object  = {
+        //   title: this.testTitle,
+        //   questions : this.questions
+        // }
+        // this._apiService.createTest(Object).subscribe((res)=>{
+        //   console.log(res);
+        //   this.getAllTest();
+        // })
       }
     });
+  }
+
+  pythonCall() {
+    this._apiService.getFromPython().subscribe((res)=>{
+      console.log(res);
+      // this.questions = res;
+    })
   }
 
   shareTest(id:any, index:any) {

@@ -6,6 +6,8 @@ const pdfParse = require('pdf-parse');
 const OpenAI = require('openai');
 const path = require('path');
 const mongoose = require('mongoose');
+const axios = require('axios');
+const FormData = require('form-data');
 require('dotenv').config();
 const app = express();
 app.use(cors());
@@ -20,43 +22,43 @@ const openai = new OpenAI({
 
 // mongoDB connection
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+// mongoose.connect(process.env.MONGODB_URL, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }).then(() => console.log('MongoDB connected'))
+//   .catch(err => console.log(err));
 
-// Schema and model
-const TestSchema = new mongoose.Schema({
-  title: String,
-  questions: [
-    {
-      question: String,
-      options: [String],
-      answer: String,
-      selectAnswer: String
-    }
-  ],
-  createdAt: { type: Date, default: Date.now }
-});
-const Test = mongoose.model('Test', TestSchema);
+// // Schema and model
+// const TestSchema = new mongoose.Schema({
+//   title: String,
+//   questions: [
+//     {
+//       question: String,
+//       options: [String],
+//       answer: String,
+//       selectAnswer: String
+//     }
+//   ],
+//   createdAt: { type: Date, default: Date.now }
+// });
+// const Test = mongoose.model('Test', TestSchema);
 
-// Routes
-app.post('/createTests', async (req, res) => {
-  console.log(req.body);
-  try {
-    const test = new Test(req.body);
-    const savedTest = await test.save();
-    res.status(201).json(savedTest);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to save test' });
-  }
-});
+// // Routes
+// app.post('/createTests', async (req, res) => {
+//   console.log(req.body);
+//   try {
+//     const test = new Test(req.body);
+//     const savedTest = await test.save();
+//     res.status(201).json(savedTest);
+//   } catch (err) {
+//     res.status(500).json({ error: 'Failed to save test' });
+//   }
+// });
 
-app.get('/getTest', async (req, res) => {
-  const tests = await Test.find();
-  res.json(tests);
-});
+// app.get('/getTest', async (req, res) => {
+//   const tests = await Test.find();
+//   res.json(tests);
+// });
 
 
 // Multer config for file upload
@@ -70,7 +72,7 @@ if (!fs.existsSync('./uploads')) fs.mkdirSync('./uploads');
 
 // Helper to generate questions
 async function generateQuestions(text) {
-  const prompt = `From the following content, create 10 multiple-choice questions (4 options each) in JSON format:
+  const prompt = `From the following content, create Maximum multiple-choice questions (4 options each) and also Generate some true false choice question based on the text below Each question should have 2 options (a-b) and clearly indicate the correct answer. in JSON format:
   Content: ${text}
   Example JSON:
   [
@@ -146,6 +148,54 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Error processing file' });
   }
+});
+
+async function sendPdfToFlask() {
+  console.log("SendPdfToFlask")
+  const filePath = path.join(__dirname, 'uploads/Kinematics.pdf'); // Your default PDF
+  const formData = new FormData();
+
+  formData.append('file', fs.createReadStream(filePath));
+
+  try {
+    const response = await axios.post('http://127.0.0.1:5000/generate-mcqs', formData, {
+      headers: formData.getHeaders(),
+    });
+
+    console.log('✅ MCQs Generated:');
+    console.log(JSON.stringify(response.data, null, 2));
+  } catch (error) {
+    console.error('❌ Error sending PDF:', error.message);
+  }
+}
+
+// sendPdfToFlask();
+
+app.get('/callFromPython', async (req, res) => {
+  console.log("SendPdfToFlask")
+  const filePath = path.join(__dirname, 'uploads/Kinematics.pdf'); // Your default PDF
+  const formData = new FormData();
+
+  formData.append('file', fs.createReadStream(filePath));
+
+  try {
+    const response = await axios.post('http://127.0.0.1:5000/generate-mcqs', formData, {
+      headers: formData.getHeaders(),
+    });
+
+    console.log('✅ MCQs Generated: api');
+    // console.log(JSON.stringify(response.data, null, 2));
+    let questions;
+    let getOutput = response.data.mcqs.replace(/```json|```/g, "");
+    console.log(getOutput);
+    questions = JSON.parse(getOutput);
+    console.log(questions);
+    res.json({ questions });
+  } catch (error) {
+    //console.error('❌ Error sending PDF:', error.message);
+    res.status(500).json({ error: error.message });
+  }
+  
 });
 
 // Fallback for Angular routes

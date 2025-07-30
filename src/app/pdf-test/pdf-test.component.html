@@ -8,12 +8,14 @@
       {{ uploadProgress }}%
     </div>
   </div>
-  <input type="text" class="form-control" [(ngModel)]="testTitle" placeholder="Enter the test title" />
+  <!-- <input type="text" class="form-control" [(ngModel)]="testTitle" placeholder="Enter the test title" /> -->
   <button class="btn btn-primary" (click)="onUpload()" [disabled]="!selectedFile">Upload & Generate</button>
+
+  <!-- <button class="btn btn-primary" (click)="pythonCall()"> Call Python</button> -->
   <!-- <input type="text" class="form-control" [(ngModel)]="mobileNumber" placeholder="Enter you whatsApp Number" />
    <button class="btn btn-primary" (click)="shareTest()">Share Test</button> -->
 
-  <table class="table table-bordered table-sm mt-4">
+  <!-- <table class="table table-bordered table-sm mt-4">
     <tr>
       <th>S.NO</th>
       <th>Topic</th>
@@ -35,7 +37,7 @@
         
       </td>
     </tr>
-  </table>
+  </table> -->
   <div *ngIf="questions.length > 0" class="mt-4">
     <h4>Generated Questions</h4>
 
